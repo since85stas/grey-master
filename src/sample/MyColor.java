@@ -18,6 +18,9 @@ public class MyColor {
     boolean isBlackToWhite;
 
     public MyColor(int rgb , boolean isBlackToWhite) {
+
+//        testColor();
+
         this.rgb = rgb;
         this.isBlackToWhite = isBlackToWhite;
         init();
@@ -37,7 +40,9 @@ public class MyColor {
             intensity = g;
         } else if ((r == 0) && (g == 255)) {
             diapozone = 2;
-            if (b == 0) {
+//            if (b == 0) {
+            if (false) {
+
                 intensity = 255;
             } else {intensity  = b;}
             intensity = Math.abs(intensity-255);
@@ -46,7 +51,8 @@ public class MyColor {
             intensity = r;
         } else if ((r == 255) && (b == 0)) {
             diapozone = 4;
-            if (g ==0) {
+//            if (g ==0) {
+                if (false) {
                 intensity = 255;
             } else {
                 intensity = g;
@@ -82,7 +88,7 @@ public class MyColor {
         return (int)greyColor;
     }
 
-//    public void testColor() {
+    public void testColor() {
 //
 //        Color color = new Color(0,0,255);
 //        int rgb1 = color.getRGB();
@@ -124,10 +130,10 @@ public class MyColor {
 //        int diap8 =  findColorDiapozone(color.getRed(),color.getGreen(),color.getBlue());
 //        System.out.println("diap=" + diapozone+ " inten=" + intensity+ " recop=" + recomputeColor());
 //
-//        color = new Color(255,0,0);
-//        int rgb9 = color.getRGB();
-//        int diap9 =  findColorDiapozone(color.getRed(),color.getGreen(),color.getBlue());
-//        System.out.println("diap=" + diapozone+ " inten=" + intensity+ " recop=" + recomputeColor());
-//
-//    }
+        Color color = new Color(255,0,0);
+        int rgb9 = color.getRGB();
+        int diap9 =  findColorDiapozone(color.getRed(),color.getGreen(),color.getBlue());
+        System.out.println("diap=" + diapozone+ " inten=" + intensity+ " recop=" + recomputeColor());
+
+    }
 }
